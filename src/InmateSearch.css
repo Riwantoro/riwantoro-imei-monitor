@@ -1,0 +1,75 @@
+/* Global Styles */
+.app {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .app.dark {
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Box */
+  .search-box input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Staff List */
+  .staff-list {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .staff-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .staff-item strong {
+    font-weight: bold;
+  }
+  
+  /* Loading Animation */
+  .loading {
+    font-size: 1.5em;
+    color: #0073e6;
+  }
+  
+  /* No Data Found */
+  .no-data {
+    font-size: 1.2em;
+    color: red;
+  }
+  
+  /* Dark Mode Toggle */
+  .dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
