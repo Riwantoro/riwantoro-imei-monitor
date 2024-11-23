@@ -21,17 +21,25 @@ const App = () => {
 
   const handleSearch = (query) => {
     setSearchQuery(query);
+
     if (query.trim() === "") {
       setSearchResults([]);
       return;
     }
+
+    const lowerQuery = query.toLowerCase();
+
+    // Filter staff list based on name or IMEI fields
     const results = staffData["Form Responses 1"].filter((staff) =>
-      staff.nama?.toLowerCase().includes(query.toLowerCase())
+      staff.nama?.toLowerCase().includes(lowerQuery) || // Search by name
+      staff.imei1?.toString().includes(lowerQuery) || // Search by IMEI1
+      (staff.Imei2 && staff.Imei2.toString().includes(lowerQuery)) || // Search by IMEI2
+      (staff.Imei3 && staff.Imei3.toString().includes(lowerQuery)) // Search by IMEI3
     );
+
     setSearchResults(results);
   };
 
-  // Updated IMEI click handler with toggle functionality
   const handleIMEIClick = (imei) => {
     if (imei && imei !== "-") {
       setClickedIMEIs((prev) => {
@@ -39,7 +47,7 @@ const App = () => {
         // Toggle clicked state
         return { ...prev, [imei]: !wasClicked };
       });
-      
+
       setTotalIMEIs((prevTotal) => {
         // If IMEI was already clicked, subtract 1; otherwise add 1
         return clickedIMEIs[imei] ? prevTotal - 1 : prevTotal + 1;
@@ -53,15 +61,15 @@ const App = () => {
       <Header />
       <SearchBox onSearch={handleSearch} />
       <IMEICounter imeiCount={totalIMEIs} />
-      
+
       {searchQuery.trim() === "" ? null : searchResults.length > 0 ? (
-        <StaffList 
-          filteredStaff={searchResults} 
+        <StaffList
+          filteredStaff={searchResults}
           onImeiClick={handleIMEIClick}
           clickedIMEIs={clickedIMEIs} // Pass clicked state to StaffList
         />
       ) : (
-        <p className="no-data">No data found</p>
+        <p className="no-data">Tidak ada data yang ditemukan.</p>
       )}
     </div>
   );

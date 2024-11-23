@@ -1,46 +1,50 @@
 import React from "react";
-import "./StaffList.css";
+import "./StaffList.css"; // Tambahkan style di sini
 
-const StaffList = ({ filteredStaff, onImeiClick }) => {
+const StaffList = ({ filteredStaff, onImeiClick, clickedIMEIs }) => {
   return (
-    <div className="staff-container">
-      {filteredStaff.length > 0 ? (
-        filteredStaff.map((staff, index) => (
-          <div key={index} className="staff-item">
-            <h3>Nama: {staff.nama || "N/A"}</h3>
-            <p>Jabatan: {staff.jabatan || "N/A"}</p>
-            <p>
-              Handphone 1: {staff.Handphone1 !== "-" ? staff.Handphone1 : "N/A"} - 
-              <span
-                className="imei-number"
+    <div className="staff-list">
+      {filteredStaff.map((staff) => (
+        <div key={staff.NOMOR} className="staff-item">
+          <h3>{staff.nama}</h3>
+          <p>Jabatan: {staff.jabatan}</p>
+          <div className="imei-list">
+            {staff.imei1 && (
+              <div
+                className={`imei ${
+                  clickedIMEIs[staff.imei1] ? "clicked" : ""
+                }`} // Tambahkan kelas 'clicked' jika aktif
                 onClick={() => onImeiClick(staff.imei1)}
               >
-                {staff.imei1 !== "-" ? staff.imei1 : "N/A"}
-              </span>
-            </p>
-            <p>
-              Handphone 2: {staff.Handphone2 !== "-" ? staff.Handphone2 : "N/A"} - 
-              <span
-                className="imei-number"
+                IMEI 1: {staff.imei1}
+                {clickedIMEIs[staff.imei1] && " ✅"}
+              </div>
+            )}
+            {staff.Imei2 && staff.Imei2 !== "-" && (
+              <div
+                className={`imei ${
+                  clickedIMEIs[staff.Imei2] ? "clicked" : ""
+                }`}
                 onClick={() => onImeiClick(staff.Imei2)}
               >
-                {staff.Imei2 !== "-" ? staff.Imei2 : "N/A"}
-              </span>
-            </p>
-            <p>
-              Handphone 3: {staff.Handphone3 !== "-" ? staff.Handphone3 : "N/A"} - 
-              <span
-                className="imei-number"
+                IMEI 2: {staff.Imei2}
+                {clickedIMEIs[staff.Imei2] && " ✅"}
+              </div>
+            )}
+            {staff.Imei3 && staff.Imei3 !== "-" && (
+              <div
+                className={`imei ${
+                  clickedIMEIs[staff.Imei3] ? "clicked" : ""
+                }`}
                 onClick={() => onImeiClick(staff.Imei3)}
               >
-                {staff.Imei3 !== "-" ? staff.Imei3 : "N/A"}
-              </span>
-            </p>
+                IMEI 3: {staff.Imei3}
+                {clickedIMEIs[staff.Imei3] && " ✅"}
+              </div>
+            )}
           </div>
-        ))
-      ) : (
-        <p className="no-data">No staff found matching your search.</p>
-      )}
+        </div>
+      ))}
     </div>
   );
 };

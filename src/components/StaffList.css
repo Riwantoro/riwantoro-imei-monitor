@@ -74,3 +74,42 @@
     }
   }
   
+  /* StaffList.css */
+.staff-list {
+    margin: 20px;
+  }
+  
+  .staff-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+  }
+  
+  .staff-item:hover {
+    background-color: #eaeaea;
+  }
+  
+  .imei {
+    padding: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  
+  .imei:hover {
+    background-color: #f0f8ff; /* Warna hover */
+  }
+  
+  .imei.clicked {
+    background-color: #d4edda; /* Warna hijau untuk status aktif */
+    border-color: #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+  }
+  

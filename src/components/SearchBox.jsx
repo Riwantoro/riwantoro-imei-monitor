@@ -9,7 +9,7 @@ const SearchBox = ({ onSearch }) => {
     <div className="search-box">
       <input
         type="text"
-        placeholder="Search by name..."
+        placeholder="Cari berdasarkan nama atau IMEI"
         onChange={handleChange}
       />
     </div>
