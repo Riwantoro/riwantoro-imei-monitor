@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
+import React from "react";
 
 const SearchBox = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
-
   const handleChange = (e) => {
-    setQuery(e.target.value);
-    onSearch(e.target.value);
+    onSearch(e.target.value); // Trigger search when input changes
   };
 
   return (
     <div className="search-box">
-      <input 
-        type="text" 
-        value={query} 
-        onChange={handleChange} 
-        placeholder="Search by name or IMEI" 
+      <input
+        type="text"
+        placeholder="Search by name..."
+        onChange={handleChange}
       />
     </div>
   );

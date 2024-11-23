@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Riwantoro Imei Monitor</h1>
+      <h1>Riwantoro IMEI Monitor</h1>
     </header>
   );
 };

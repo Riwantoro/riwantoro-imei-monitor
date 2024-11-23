@@ -1,0 +1,76 @@
+/* Container for the staff list */
+.staff-container {
+    max-width: 800px; /* Box size adjustment */
+    margin: 2rem auto; /* Center horizontally and add space at the top */
+    padding: 1rem;
+    background: var(--bg-secondary); /* Matches dark/light theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Fancy shadow */
+    border: 1px solid var(--border-color);
+  }
+  
+  /* Individual staff item */
+  .staff-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-primary); /* Matches dark/light theme */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Hover effect for staff item */
+  .staff-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Staff name styling */
+  .staff-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: bold;
+  }
+  
+  /* Other text in the staff item */
+  .staff-item p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Styling for IMEI numbers */
+  .imei-number {
+    color: #007bff; /* Blue for links */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Hover effect for IMEI numbers */
+  .imei-number:hover {
+    color: #0056b3; /* Darker blue */
+    text-decoration: none;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .staff-container {
+      padding: 0.8rem;
+    }
+  
+    .staff-item {
+      padding: 0.8rem;
+    }
+  
+    .staff-item h3 {
+      font-size: 1rem;
+    }
+  
+    .staff-item p {
+      font-size: 0.9rem;
+    }
+  }
+  

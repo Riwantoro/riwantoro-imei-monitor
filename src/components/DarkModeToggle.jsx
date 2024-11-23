@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from "react";
+import "./DarkModeToggle.css";
 
-const DarkModeToggle = ({ toggleDarkMode }) => {
+const DarkModeToggle = ({ isDarkMode, toggleDarkMode }) => {
   return (
-    <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-      <span>{'🌙'}</span>
+    <div
+      className="dark-mode-toggle"
+      onClick={toggleDarkMode}
+      title={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
+    >
+      {isDarkMode ? "🌙" : "☀️"}
     </div>
   );
 };
