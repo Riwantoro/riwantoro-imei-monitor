@@ -145,10 +145,10 @@
      },
      {
       "NOMOR": 14,
-      "nama": "I Nyoman Adnyana ",
-      "jabatan": "Staff Minkamtib ",
-      "Handphone1": "VIVO Y71",
-      "imei1": "087861135462",
+      "nama": "-",
+      "jabatan": "-",
+      "Handphone1": "-",
+      "imei1": "-",
       "Handphone2": "-",
       "Imei2": "-",
       "Handphone3": "-",
@@ -269,7 +269,7 @@
       "nama": "I Wayan Hedi Suartama",
       "jabatan": "Anggota jaga",
       "Handphone1": "Huawei P30 pro",
-      "imei1": 867380040449652,
+      "imei1": 867380040469668,
       "Handphone2": "-",
       "Imei2": "-",
       "Handphone3": "-",
@@ -709,9 +709,9 @@
       "nama": "AA Wika",
       "jabatan": "Anggota regu jaga",
       "Handphone1": "Infinix note 30",
-      "imei1": 356785874321785,
+      "imei1": 356785874321793,
       "Handphone2": "Oppo",
-      "Imei2": 356785874321793,
+      "Imei2": 865525030786842,
       "Handphone3": "-",
       "Imei3": "-"
      },
@@ -720,7 +720,7 @@
       "nama": "I Made Mudana Adi Putra",
       "jabatan": "Anggota Regu Jaga",
       "Handphone1": "Oppo Reno 6",
-      "imei1": 869793054236450,
+      "imei1": 869793054236443,
       "Handphone2": "Realme 3",
       "Imei2": 868236043840694,
       "Handphone3": "-",
@@ -907,7 +907,7 @@
       "nama": "Iwayan yedy suryantara",
       "jabatan": "Anggota jaga",
       "Handphone1": "11 pro",
-      "imei1": "087862286984",
+      "imei1": "323835102671031",
       "Handphone2": "Ipone 11 pro",
       "Imei2": "-",
       "Handphone3": "-",
@@ -1275,6 +1275,17 @@
       "Imei2": "-",
       "Handphone3": "-",
       "Imei3": "-"
-     }
+     },
+     {
+        "NOMOR": 118,
+        "nama": "I WAYAN AGUS PRIMAYANA",
+        "jabatan": "KASUBSI KEAMANAN",
+        "Handphone1": "Iphone 15 PM",
+        "imei1": "350492196906866",
+        "Handphone2": "SAMSUNG A14",
+        "Imei2": "351998834429599",
+        "Handphone3": "NOKIA 105",
+        "Imei3": "356899070398602"
+       }
     ]
     }

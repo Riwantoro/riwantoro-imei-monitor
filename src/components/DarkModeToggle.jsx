@@ -8,7 +8,7 @@ const DarkModeToggle = ({ isDarkMode, toggleDarkMode }) => {
       onClick={toggleDarkMode}
       title={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
     >
-      {isDarkMode ? "🌙" : "☀️"}
+      {isDarkMode ? "🌙" : "❤️"}
     </div>
   );
 };
